@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){function e(e,n,t){var o=screen.width/2-n/2,r=screen.height/2-t/2;window.open(e,"","menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width="+n+",height="+t+",top="+r+",left="+o)}$(".social-js").on("click",function(n){n.preventDefault(),e($(this).attr("href"),500,300)})});

@@ -1,0 +1,130 @@
+@import libs/owl/owl.carousel
+@import partials/variables
+@import partials/mixins
+
+body.page
+	@include font($avenir, 1.6, 500, $text)
+
+.entry
+	padding: 0
+	margin: 0
+	margin-top: 30px
+	@include tablet-or-bigger
+		margin-top: 40px
+
+.section
+	text-align: center
+	padding-top: 5rem
+	padding-bottom: 5rem
+	padding-left: 2rem
+	padding-right: 2rem
+	@include desktop
+		padding: 6rem
+	width: 100%
+	.section-title
+		background: url()
+		@include font($avenir, 2.4, bold)
+		@include uppercase()
+		letter-spacing: 3px
+		display: block
+		span 
+			display: inline-block
+			position: relative
+			line-height: 1.2
+			@include margin-sides(40px)
+		span::before, span::after
+			content: ""
+			position: absolute
+			top: 15px
+			height: 5px 
+			border-bottom: 2px solid $border
+			width: 30px
+			@include tablet
+				width: 10%
+			@include desktop
+				width: 30%
+		span::before
+			right: 100%
+			margin-right: 5px
+			@include tablet-or-bigger
+				margin-right: 30px
+				height: 2px
+		span::after
+			left: 100%
+			margin-left: 5px
+			@include tablet-or-bigger
+				margin-left: 30px
+				height: 2px
+
+.section:nth-of-type(odd)
+	background-color: $white
+
+.section:nth-of-type(even)
+	background-color: $light-gray
+
+
+.section-about 
+	// max-width: 760px
+	margin: auto
+	img
+		max-width: 70%
+
+.section-believe
+	// background-color: $light-gray
+
+	.section-content
+		display: flex
+		flex-direction: column
+		@include tablet-or-bigger
+			flex-direction: row 
+		margin-top: 2rem
+		ul 
+			text-align: left
+			max-width: 700px
+			margin: 20px
+			margin-bottom: 0px
+			padding: 1rem
+			padding-top: 0px
+			padding-bottom: 0px
+			@include tablet-or-bigger
+				padding: 5rem
+			@include tablet-or-bigger
+				margin: auto
+				@include margin-vert(6rem)
+			li
+				line-height: 1.2
+				margin-bottom: 2rem
+				list-style: none
+		ul:first-of-type
+			@include tablet-or-bigger
+				padding-right: 1rem
+		ul:last-of-type
+			@include tablet-or-bigger
+				padding-left: 1rem
+
+	p 
+		margin-bottom: 4px
+
+.column-wrapper
+	display: flex
+	flex-direction: column 
+	margin: auto
+	@include tablet-or-bigger
+		flex-direction: row
+	flex-wrap: row 
+	margin-bottom: 0px
+	br 
+		display: none 
+	.column 
+		text-align: left
+		max-width: 700px
+		margin: 20px
+		p:last-of-type
+			margin-bottom: 0px
+		br 
+			display: none
+
+
+
+
+@import partials/partner-carousel

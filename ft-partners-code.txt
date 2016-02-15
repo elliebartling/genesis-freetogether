@@ -1,0 +1,7 @@
+[ft-section id="partners" title="freetogether partners near you"]
+
+[partners_carousel]
+
+[zipcode_filter]
+
+[/ft-section]

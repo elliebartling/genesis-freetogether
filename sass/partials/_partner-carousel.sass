@@ -1,0 +1,103 @@
+$flag-size: 90px
+$flag-wrapper-size: $flag-size * 1.4
+
+.owl-carousel
+	max-width: 1200px
+	width: 90% !important
+	margin: auto
+	margin-top: 60px
+	.owl-stage
+		margin: auto
+	.item
+		border-radius: 4px
+		text-align: center
+		height: 230px
+		// width: 300px
+		@include tablet-or-bigger
+			height: 230px
+			// width: 300px
+		overflow: hidden
+		h4
+			@include font($avenir, 2, 400, $white)
+			// line-height: 230px
+		.has-logo
+			content: ' '
+			width: 100%
+			height: 100%
+			background-size: cover !important
+			background-position: center center
+			filter: blur(10px)
+			-webkit-filter: blur(10px)
+			&:hover
+				filter: blur(0px)
+				-webkit-filter: blur(0px)
+				@include transition(all, .7s)
+		.item-overlay
+			display: flex
+			flex-flow: column
+			justify-content: center
+			align-items: center
+			background-color: $dark-blue-rgba
+			position: absolute
+			top: 0
+			border-radius: 4px
+			width: 100%
+			height: 100%
+			padding: 6%
+			padding-top: 19%
+			@include transition(all, .7s)
+			h4
+				@include font($avenir, 1.8, 600, $white)
+				text-transform: uppercase
+			h5 
+				@include font($avenir, 1.4, 400, $white)
+
+		.has-logo + .item-link .item-overlay
+			opacity: 1
+			&:hover, &:focus
+				opacity: 1
+				filter: blur(0px)
+				-webkit-filter: blur(0px)
+				@include transition(all, .7s)
+
+
+
+
+	.state
+		position: absolute
+		top: 0
+		right: 0
+		text-align: right
+		display: block
+		border-radius: 3px
+		width: $flag-size 
+		height: $flag-size
+		overflow: hidden
+		.state-triangle
+			display: block
+			float: right
+			width: $flag-size
+			height: $flag-size
+			border-radius: 3px
+			background: url(../images/primary-square.png)
+		.state-name
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			margin: 1.5rem
+			@include font($avenir, 1.8, 600, $white)
+			line-height: 1
+			width: $flag-size
+			
+
+	.owl-prev, .owl-next
+		position: absolute
+		top: 50%
+		padding: 5px
+		font-size: 3rem
+	.owl-prev
+		left: -50px
+	.owl-next
+		right: -50px
+

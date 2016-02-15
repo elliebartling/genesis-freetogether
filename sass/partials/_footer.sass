@@ -1,0 +1,111 @@
+.site-footer
+	background-color: $transp-white
+	-webkit-backdrop-filter: blur(10px)
+	z-index: 999
+	position: fixed
+	bottom: 0
+	width: 100%
+	height: 50px
+	text-align: left
+
+	display: flex
+	flex-direction: row 
+	flex-wrap: nowrap
+
+	padding: 0px
+	border-top: 0px $transp-white solid
+
+	.footer-wrap
+		// max-width: 700px
+		width: 100%
+		margin: auto
+		margin-top: 0px
+		margin-bottom: 0px
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: space-between
+
+	.icons-wrap
+		display: flex
+		flex-direction: row 
+		flex-wrap: nowrap
+		width: 100%
+		.social-square
+			flex-grow: 1
+			width: 100%
+			text-align: center
+			@include transition(all, .7s)
+			border-top: 2px solid
+		.social
+			// background-color: $transp-gray
+			@include font($avenir, 2.8, 800, $white)
+			line-height: 1.6
+			border-radius: 0px
+			font-weight: bolder
+			text-align: center
+			padding: 6px
+			// &:hover
+			// 	background-color: transparent
+			// 	color: $dark-primary
+			// 	@include transition(all, .5s)
+		.social-square.facebook
+			background: $dark-blue
+			border-color: darken($dark-blue, 20%)
+			&:hover
+				background: darken($dark-blue, 7%)
+		.social-square.twitter
+			background: $medium-blue
+			border-color: darken($medium-blue, 20%)
+			&:hover
+				background: darken($medium-blue, 7%)
+		.social-square.email
+			background: $light-gray
+			span 
+				color: $dark-blue
+			border-color: darken($light-gray, 20%)
+			&:hover
+				background: darken($light-gray, 7%)
+		.social-square.subscribe
+			flex-basis: content
+			background: $primary
+			text-align: center
+			border-color: $dark-primary
+			&:hover
+				background: $dark-primary
+			@include font($avenir, 1.2, 500, $white)
+			text-transform: uppercase
+			text-decoration: none
+			line-height: 2
+			text-align: center
+			letter-spacing: 1px
+			padding: 15px
+			@include desktop
+				display: none
+
+	.email-capture-form
+		margin: 0
+		width: 100%
+		background: $primary
+		display: none 
+		border-top: 2px $dark-primary solid
+		@include desktop
+			display: block
+		
+		.form 
+			width: 100%
+			margin: auto
+			margin-top: 10px
+			vertical-align: middle
+			text-align: center
+			float: right
+			justify-content: center
+			// align-items: center
+		label
+			@include font($avenir, 1.5, 200, $white)
+		input[name="EMAIL"]
+			background-color: $dark-primary
+			color: $white
+			float: right
+		.button
+			background-color: transparent

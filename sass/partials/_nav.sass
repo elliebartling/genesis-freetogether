@@ -1,0 +1,63 @@
+header.site-header
+	background-color: $transp-white
+	-webkit-backdrop-filter: blur(10px)
+	position: fixed
+	z-index: 999
+	width: 100%
+
+	height: 70px
+	min-height: 70px
+	border-bottom: 2px lighten($gray, 10%) solid
+
+	.wrap
+		padding: 6px 15px
+		max-width: 100%
+		.title-area
+			padding: 0px
+			max-width: 40px
+			max-height: 40px
+			margin: auto
+			a 
+				background: url(../images/logo-flag-color.png) no-repeat left
+				background-size: contain
+				&:hover
+					opacity: .4
+
+.widget-area.header-widget-area
+	max-width: calc(100% - 40px)
+
+.genesis-nav-menu a span
+	color: $dark-blue
+.genesis-nav-menu li:last-of-type a span
+	color: $white
+
+nav.nav-header
+	ul 
+		text-align: right
+	ul li a, ul li a:visited, ul li a:focus
+		padding: 22px
+		@include font($avenir, 1.2, 600, $white)
+		@include antialised()
+		text-transform: uppercase
+		letter-spacing: 1px
+		text-decoration: none !important
+		&:hover, &:focus
+			color: $white
+			opacity: .4
+			text-decoration: none
+	li:first-of-type
+		display: none
+		@include tablet-or-bigger
+			display: inline-block
+	li:last-of-type a, li:last-of-type a:visited, li:last-of-type a:focus
+		background-color: $primary
+		border-radius: 2px
+		padding: 15px 20px
+		color: $white !important
+		text-decoration: none
+		border: none
+		outline: none
+		&:hover, &:active
+			background-color: $dark-primary
+			@include transition(all, .25s)
+			opacity: 1

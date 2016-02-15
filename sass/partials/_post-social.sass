@@ -1,0 +1,32 @@
+.post-social
+	opacity: 0
+	@include desktop
+		opacity: 1
+	position: relative
+	left: -50px
+	top: 45px
+	z-index: -1
+	.icons-wrap
+		flex-direction: column
+		width: 30px
+		.social 
+			display: block
+			width: 40px
+			height: 40px
+			border-radius: 2px
+			background-color: $primary
+			text-align: center
+			margin: auto
+			margin-bottom: 10px
+			@include font($avenir, 2.5, 800, $white)
+			&:hover
+				background-color: $dark-primary
+				@include transition(all, .7s)
+			span 
+				margin: auto
+		.social.facebook
+			background-color: $dark-blue
+		.social.twitter
+			background-color: $medium-blue
+		.social.email
+			background-color: $primary

@@ -1,0 +1,111 @@
+$preview-square-base: 90%
+$preview-square-tablet: 400px
+$preview-square-desktop: 600px
+
+
+body.home, body.single
+	.preview-navigation
+		max-width: 100%
+		margin-top: 2em
+
+		background-color: $darkest-blue
+		padding: 1em
+		@include desktop 
+			padding: 0
+			background-color: $white
+		.preview-wrap
+			display: flex
+			flex-direction: row 
+			flex-wrap: wrap
+			width: 100%
+			padding-top: 25px
+			padding-bottom: 25px
+			@include tablet 
+				margin: auto
+				flex-wrap: nowrap
+			@include desktop 
+				padding-top: 0px
+				padding-bottom: 0px
+			.preview-video
+				width: 95%
+				height: 300px
+				margin: auto
+				
+				overflow: hidden 
+				border-radius: 2px
+				@include tablet 
+					margin: 0
+					// margin-top: 2em
+				@include desktop 
+					width: $preview-square-desktop
+					height: 100%
+					width: 50%
+					margin: 0
+				
+
+
+				.play-button
+					width: 100%
+					height: 300px
+					background-size: 15%
+					background-position: center center
+					@include desktop 
+						width: 100%
+						height: 100%
+						background-size: 100px
+
+					
+				a img 
+					object-fit: cover
+					height: 100%
+					width: 100%
+					
+			.preview-meta
+				margin: auto
+				max-width: 500px
+				padding: 10px
+
+				@include tablet 
+					margin: 0em
+					padding: .5em
+					padding-left: 3em
+					padding-top: 3em
+					// max-width: 50%
+
+				@include desktop
+					width: 50%
+					background: url(../images/flag-tip.png) no-repeat 15% 80%
+
+
+				.preview-title
+					border-radius: 2px
+					margin-bottom: .8em
+					@include desktop 
+						background-color: $primary
+						padding: 20px
+					
+					@include tablet
+						width: auto
+					a 
+						@include font($avenir, 4, bold, $white)
+						@include uppercase()
+						text-decoration: none
+						line-height: 1.1
+						@include letterspacing(3)
+
+				.preview-story-name p
+					@include desktop
+						float: right
+					@include font($avenir, 2, light, $gray)
+					@include uppercase()
+					@include letterspacing(3)
+					line-height: 1.1
+
+
+
+	@include desktop 
+		.preview-navigation .preview-wrap:last-of-type
+			.preview-video
+				order: 2
+
+

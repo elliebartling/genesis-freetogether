@@ -1,0 +1,73 @@
+// MIXINS
+
+@mixin font-size($sizeValue: 1.6) 
+	font-size: ($sizeValue * 10) + px
+	font-size: $sizeValue + rem
+
+
+@mixin font($fam, $size, $weight: normal, $color: $gray-blue)
+	font-family: $fam
+	font-weight: $weight
+	@include font-size($size)
+	color: $color
+
+@mixin transition($trans, $time)
+	transition: $trans $time
+	-webkit-transition: $trans $time
+
+@mixin uppercase()
+	text-transform: uppercase
+
+@mixin lineheight($h: 1.4)
+	line-height: $h
+
+@mixin letterspacing($l: 1)
+	letter-spacing: $l px
+
+@mixin margin-sides($m)
+	margin-left: $m 
+	margin-right: $m 
+
+@mixin margin-vert($m)
+	margin-top: $m 
+	margin-bottom: $m 
+
+
+@mixin antialised()
+	-webkit-font-smoothing: antialiased
+
+@mixin aspect-ratio($width, $height) 
+	position: relative
+	&:before 
+		display: block
+		content: ""
+		width: 100%
+		padding-top: ($height / $width) * 100%
+  
+	> iframe 
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+  
+
+
+
+$tablet-width: 768px
+$desktop-width: 1024px
+
+
+@mixin tablet 
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+		@content
+
+@mixin desktop 
+	@media (min-width: #{$desktop-width})
+		@content
+
+@mixin tablet-or-bigger
+	@media (min-width: #{$tablet-width})
+		@content

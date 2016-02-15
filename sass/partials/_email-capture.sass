@@ -1,0 +1,201 @@
+// Placeholder text
+::-webkit-input-placeholder
+	@include font($avenir, 2, 400, $white)
+	font-style: italic
+	opacity: 1
+
+// Placeholder text, mozilla
+::-moz-placeholder
+	@include font($avenir, 2, 400, $white)
+	font-style: italic
+	opacity: 1
+
+.email-capture-bar
+	background-color: $light-gray
+	padding: 10em 0em
+	display: flex
+	flex-flow: row wrap
+	.email-capture-flag
+		max-width: 50%
+		margin: auto
+		width: 100%
+		@include tablet
+			width: 100%
+		@include desktop
+			width: 50%
+		text-align: center
+.email-capture-form, .freetogether-form
+	text-align: center
+	max-width: 90%
+	width: 100%
+	margin: auto
+	margin-top: 2em
+	@include tablet
+		width: 100%
+	@include desktop
+		width: 50%
+	
+	// .response
+	// 	display: none !important
+	.label
+		margin-bottom: 2rem
+		@include font($avenir, 1.8rem, 600, $gray-blue)
+		@include letterspacing(2)
+	form 
+		font-weight: 200
+		width: 80%
+		margin: auto
+	input[name="EMAIL"], input[name="ZIP"]
+		border-radius: 2px
+		background-color: $primary
+		color: $white
+		border: none
+		max-width: 90%
+		padding-right: 50px
+	.button
+		position: relative
+		margin-left: -50px
+		background-color: $primary
+		top: 2px
+		padding: 2px
+		order: 2
+		height: 30px
+		width: 40px
+		z-index: 2
+		padding: 0px
+		padding-right: 5px
+		content: '\f3d6'
+		// background: url(../images/button-bg.png)
+		background-position: right center
+		background-size: cover
+		// font-family: Ionicons
+		// color: $white
+		@include font(Ionicons, 2.7, 200, $white)
+		line-height: 1.7
+		&:hover
+			background-color: transparent
+		&:hover
+			background-color: $primary
+		h3
+			line-height: 0
+			@include font($avenir, 1.8, 200, $white)
+			span 
+				font-weight: 200
+	// .button:placeholder 
+	// 	content: '\f3d6'
+	// 	@include font(Ionicons, 1.7, 200, $white)
+	label.zipcode
+		@include font($avenir, 1.6, 600, $gray)
+		line-height: 1.4
+
+.small-form
+	padding: 0px
+	margin: 0px
+	max-height: 50px
+	text-align: right
+	form 
+		text-align: right
+		margin: 0px
+		width: 100%
+		flex-shrink: 2
+		vertical-align: middle
+		height: 20px
+		.form 
+			display: flex
+			flex-flow: row
+			flex-wrap: nowrap
+			padding-top: 0px
+			justify-content: flex-end
+			.label
+				width: 50%
+				line-height: 2
+				text-align: right
+				padding-right: 10px
+				display: none
+				@include desktop
+					display: block
+			.input 
+				width: auto
+				display: flex 
+				flex-flow: row 
+				flex-wrap: nowrap
+				justify-content: flex-end
+				padding-right: 10px
+		input::-webkit-input-placeholder
+			@include font($avenir, 1.4, 300, $white)
+			line-height: 1.7
+			font-style: italic
+			opacity: 1
+		input[name="EMAIL"], input[name="ZIP"], input,
+		input[name="EMAIL"]:focus, input[name="ZIP"]:focus, input:focus 
+			@include font($avenir, 1.4, 300, $white)
+			padding: 0px 10px
+			padding-right: 30px
+			line-height: 1.7
+			height: 30px
+			max-width: 500px
+			min-width: 140px
+			width: 100%
+			// background: url(../images/arrow-right.png) no-repeat
+			background-size: 15px
+			background-position: 97% center
+		.button 
+			margin-left: -20px
+			min-width: 10px
+			width: 20px
+			float: right
+			order: 2
+			height: 20px
+			padding: 0px
+			padding-right: 5px
+			content: '\f3d6'
+			// font-family: Ionicons
+			// color: $white
+			@include font(Ionicons, 1.7, 200, $white)
+			&:hover
+				background-color: transparent
+			// h3
+			// 	line-height: 1.7
+			// 	font-size: 1.7rem
+		// .button.success
+		// 	content: '\f121'
+		// .button.error
+		// 	content: '\f129'
+
+#mce-responses
+	#mce-error-response, #mce-success-response
+		background: $primary
+		color: $white
+		padding: 5rem
+		position: absolute 
+		width: 100%
+		bottom: 100%
+		left: 0
+		// -webkit-transform: translateY(10px)
+		// -moz-transform: translateY(10px)
+		// -ms-transform: translateY(10px)
+		// -o-transform: translateY(10px)
+		// transform: translateY(10px)
+		@include transition(all, 1s)
+	#mce-success-response
+		background: $dark-blue
+
+.match-me
+	background: url(../images/button-bg.png)
+	background-position: center right
+	background-repeat: no-repeat
+	background-size: cover
+	width: 100% !important
+	text-transform: none !important
+	@include transition(all, .7s)
+	&:hover
+		background: url(../images/button-bg-dark.png)
+		background-position: center right
+		background-repeat: no-repeat
+		background-size: cover
+		@include transition(all, .7s)
+
+
+
+
+
