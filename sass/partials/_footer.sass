@@ -25,12 +25,14 @@
 		flex-direction: row
 		flex-wrap: nowrap
 		justify-content: space-between
+		box-sizing: content-box
 
 	.icons-wrap
 		display: flex
 		flex-direction: row 
 		flex-wrap: nowrap
 		width: 100%
+		box-sizing: border-box
 		.social-square
 			display: block
 			flex-grow: 1
@@ -38,6 +40,8 @@
 			text-align: center
 			@include transition(all, .7s)
 			border-top: 2px solid
+			border-left: 0px !important
+			border-right: 0px !important
 		.social
 			// background-color: $transp-gray
 			@include font($avenir, 2, 800, $white)

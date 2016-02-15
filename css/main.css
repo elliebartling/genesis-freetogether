@@ -813,12 +813,14 @@ body.home .preview-navigation, body.single .preview-navigation {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between; }
+    justify-content: space-between;
+    box-sizing: content-box; }
   .site-footer .icons-wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%; }
+    width: 100%;
+    box-sizing: border-box; }
     .site-footer .icons-wrap .social-square {
       display: block;
       flex-grow: 1;
@@ -826,7 +828,9 @@ body.home .preview-navigation, body.single .preview-navigation {
       text-align: center;
       transition: all 0.7s;
       -webkit-transition: all 0.7s;
-      border-top: 2px solid; }
+      border-top: 2px solid;
+      border-left: 0px !important;
+      border-right: 0px !important; }
     .site-footer .icons-wrap .social {
       font-family: "Avenir Next W00";
       font-weight: 800;

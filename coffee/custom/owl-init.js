@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
         loop:false,
         margin:10,
         nav:true,
+        mouseDrag: false,
         navText: ['<span class="ion-ios-arrow-left"></span>','<span class="ion-ios-arrow-right"></span>'],
         // autoWidth: false,
         responsiveClass: true,
