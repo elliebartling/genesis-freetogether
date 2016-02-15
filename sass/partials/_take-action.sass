@@ -53,7 +53,9 @@ body.modal-open .content, body.modal-open .featured-header
 			padding-bottom: 0px
 		.modal-title
 			text-align: center
-			@include font($avenir, 4, bold, $white)
+			@include font($avenir, 3, bold, $white)
+			@include tablet-or-bigger
+				@include font($avenir, 4, bold, $white)
 			line-height: 1
 			@include uppercase()
 			letter-spacing: 2px
@@ -89,7 +91,7 @@ body.modal-open .content, body.modal-open .featured-header
 				margin-bottom: 2rem
 				margin-top: 1rem
 			input[type="submit"]
-				background: url(../images/button-bg.png) center center
+				background: url(../images/button-bg.png) center right
 				background-size: cover
 				background-color: $primary
 				border-radius: 2px
