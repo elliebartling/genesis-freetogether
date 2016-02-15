@@ -1,0 +1,13 @@
+// Import Variables & Mixins
+@import partials/variables
+@import partials/mixins
+
+body.page
+	main.content div.entry
+		max-width: 760px
+		margin: 20px
+		@include tablet-or-bigger
+			margin: auto
+		@include font($avenir, 1.6, 400, $gray-blue)
+		h1
+			@include font($avenir, 3, 600, $gray-blue)

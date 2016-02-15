@@ -1,0 +1,19 @@
+@import url(http://fast.fonts.net/cssapi/d8808c07-1c7c-4e73-96d4-e4c9f107e235.css);
+@impot ionicons.css;
+body.page main.content div.entry {
+  max-width: 760px;
+  margin: 20px;
+  font-family: "Avenir Next W00";
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #646670; }
+  @media (min-width: 768px) {
+    body.page main.content div.entry {
+      margin: auto; } }
+  body.page main.content div.entry h1 {
+    font-family: "Avenir Next W00";
+    font-weight: 600;
+    font-size: 30px;
+    font-size: 3rem;
+    color: #646670; }
