@@ -2,7 +2,7 @@
 @import partials/variables
 @import partials/mixins
 
-body.page, body.single
+body.page:not(.single-post), body.single:not(.single-post)
 	main.content div.entry
 		max-width: 760px
 		margin: 20px
@@ -11,3 +11,9 @@ body.page, body.single
 		@include font($avenir, 1.6, 400, $gray-blue)
 		h1
 			@include font($avenir, 3, 600, $gray-blue)
+
+body[class*="legull"]
+	.entry-header
+		display: none
+	.post-social
+		display: none
