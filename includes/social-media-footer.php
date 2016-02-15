@@ -28,7 +28,7 @@ function bg_custom_footer() {
 						<span class="ion-paper-airplane"></span>
 				</a>
 				<a class="social social-square subscribe" href="#" data-toggle="modal" data-target="#takeAction">
-					Take&nbsp;Action
+					<span class="footer-take-action">Take&nbsp;Action</span>
 				</a>
 				
 				
