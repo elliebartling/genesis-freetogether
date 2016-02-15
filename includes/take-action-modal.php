@@ -6,7 +6,7 @@ add_action( 'genesis_after_content', 'ft_take_action_modal' );
 function ft_take_action_modal() {
 
 	$before = '';
-	$before .= '<div class="modal fade take-action-modal" tabindex="-1" role="dialog" id="takeAction">
+	$before .= '<div class="modal take-action-modal" tabindex="-1" role="dialog" id="takeAction">
 				  <div class="modal-dialog">
 				    <div class="modal-content">
 				      <div class="modal-header">
