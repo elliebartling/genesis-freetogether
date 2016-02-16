@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
         mouseDrag: false,
         pullDrag: false,
         freeDrag: false,
+        touchDrag: false,
         navText: ['<span class="ion-ios-arrow-left"></span>','<span class="ion-ios-arrow-right"></span>'],
         // autoWidth: false,
         responsiveClass: true,

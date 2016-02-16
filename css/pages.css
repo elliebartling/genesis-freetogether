@@ -22,3 +22,5 @@ body[class*="single-legull"] .entry {
   padding-top: 100px; }
 body[class*="single-legull"] .post-social {
   display: none; }
+body[class*="single-legull"] .take-action-cta {
+  display: none; }

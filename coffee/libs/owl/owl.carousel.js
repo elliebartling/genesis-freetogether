@@ -192,9 +192,9 @@
 		loop: false,
 		center: false,
 
-		mouseDrag: true,
+		mouseDrag: false,
 		touchDrag: true,
-		pullDrag: true,
+		pullDrag: false,
 		freeDrag: false,
 
 		margin: 0,
