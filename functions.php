@@ -72,6 +72,9 @@ add_theme_support('post-thumbnails');
 // Add Post Thumbnail Support
 set_post_thumbnail_size(1800, 850, TRUE);
 
+// Add Post Thumbnail Support
+set_post_thumbnail_size(1400, 850, TRUE);
+
 // Don't show admin bar
 show_admin_bar(false);
 
