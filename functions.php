@@ -70,7 +70,7 @@ function ft_exclude_category_from_home( $query ) {
 add_theme_support('post-thumbnails'); 
 
 // Add Post Thumbnail Support
-set_post_thumbnail_size(1800, 850, TRUE);
+set_post_thumbnail_size(1500, 850, TRUE);
 
 // if ( is_mobile() ) {
 // // Add Post Thumbnail Support
