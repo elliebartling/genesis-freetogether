@@ -17,8 +17,8 @@ define( 'VIDEO_LIGHTBOXES_FIELD', '_video_lightboxes' );
 define( 'VIDEO_LIGHTBOXES_VERSION', '1' );
 
 function vl_enqueue_scripts() {
-	wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/featherlight.min.js' );
-	wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/lightbox-init.js' );
+	wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/featherlight.min.js', '', false, true );
+	wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/lightbox-init.js', '', false, true );
 	// wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/lightboxes.js' );
 
 	wp_enqueue_style( 'featherlight', VIDEO_LIGHTBOXES_PATH . 'js/featherlight.min.css' );

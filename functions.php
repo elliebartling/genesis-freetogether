@@ -72,10 +72,10 @@ add_theme_support('post-thumbnails');
 // Add Post Thumbnail Support
 set_post_thumbnail_size(1800, 850, TRUE);
 
-if ( is_mobile() ) {
-// Add Post Thumbnail Support
-set_post_thumbnail_size(500, 500, TRUE);
-}
+// if ( is_mobile() ) {
+// // Add Post Thumbnail Support
+// set_post_thumbnail_size(500, 500, TRUE);
+// }
 
 // Don't show admin bar
 show_admin_bar(false);
