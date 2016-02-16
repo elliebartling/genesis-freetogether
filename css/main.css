@@ -505,13 +505,16 @@ body.home .preview-navigation, body.single .preview-navigation {
       border-radius: 2px; }
       @media (min-width: 768px) and (max-width: 1023px) {
         body.home .preview-navigation .preview-wrap .preview-video, body.single .preview-navigation .preview-wrap .preview-video {
-          margin: 0; } }
+          margin: 0;
+          width: 430px; } }
       @media (min-width: 1024px) {
         body.home .preview-navigation .preview-wrap .preview-video, body.single .preview-navigation .preview-wrap .preview-video {
           width: 600px;
           height: 100%;
           width: 50%;
           margin: 0; } }
+      body.home .preview-navigation .preview-wrap .preview-video a, body.single .preview-navigation .preview-wrap .preview-video a {
+        height: 450px; }
       body.home .preview-navigation .preview-wrap .preview-video .play-button, body.single .preview-navigation .preview-wrap .preview-video .play-button {
         width: 100%;
         height: 300px;
@@ -872,7 +875,8 @@ body.home .preview-navigation, body.single .preview-navigation {
       background: #E83D43;
       text-align: center;
       border-color: #B5373B;
-      text-decoration: none; }
+      text-decoration: none;
+      padding: 0px; }
       .site-footer .icons-wrap .social-square.subscribe:hover {
         background: #B5373B; }
       .site-footer .icons-wrap .social-square.subscribe .footer-take-action {
