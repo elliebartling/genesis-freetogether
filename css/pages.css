@@ -18,7 +18,7 @@ body.page:not(.single-post) main.content div.entry, body.single:not(.single-post
     font-size: 3rem;
     color: #646670; }
 
-body[class*="single-legull"] {
+body[class*="single-legull"] .entry {
   padding-top: 100px; }
-  body[class*="single-legull"] .post-social {
-    display: none; }
+body[class*="single-legull"] .post-social {
+  display: none; }
