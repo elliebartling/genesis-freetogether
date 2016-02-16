@@ -29,12 +29,14 @@ jQuery(document).ready(function($) {
 		// Add a data attribute to that .owl-item
 		$(this).attr('data-state',stateAbbr);
 		// $(this).attr('data-visibility', 'yes');
+		// $('.owl-carousel').reinit({mouseDrag: false, pullDrag: false, freeDrag: false});
 	});
 
 	// Initiate MixItUp plugin, sort by state ascending
 	$('.owl-stage').mixItUp();
 	// $('.owl-stage').children().removeClass('active');
 	$('.owl-stage').mixItUp('sort','state:asc').trigger('next.owl.carousel');
+	// $('.owl-carousel').reinit({mouseDrag: false, pullDrag: false, freeDrag: false});
 	
 	// $('.owl-carousel').trigger('to.owl.carousel', 0);
 	// $('.owl-carousel').trigger('prev.owl.carousel');
