@@ -17,3 +17,6 @@ body.page:not(.single-post) main.content div.entry, body.single:not(.single-post
     font-size: 30px;
     font-size: 3rem;
     color: #646670; }
+
+body[class*="single-legull"] .post-social {
+  display: none; }
