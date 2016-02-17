@@ -26,7 +26,7 @@ add_action( 'genesis_before_content', 'ft_featured_header' );
 			// Hack fix for the time being to display the correct video
 			// Right now, Featured Video Plus is pulling from *posts* not pages
 			// Fix before handoff.
-			$video_id = '155342382';
+			$video_id = '155747456';
 
 
 			$player_url = '//player.vimeo.com/video/' . $video_id . '?autoplay=1&color=FFF';
