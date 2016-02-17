@@ -171,7 +171,8 @@ body.home .featured-header
 		opacity: 1
 		@include transition(background-color, 0.5s)
 
-body.home.safari.desktop .featured-header .has-content-area
-	width: calc(50% - 2px)
-	left: -2px
+body.home.safari .featured-header .has-content-area
+	@include desktop
+		width: calc(50% - 2px)
+		left: -2px
 

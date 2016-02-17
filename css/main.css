@@ -99,15 +99,16 @@ body {
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out; }
 
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
   transform: translate(0, 0); }
 
 .modal-open .modal {
@@ -125,7 +126,9 @@ body {
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: 0; }
 
@@ -189,6 +192,7 @@ body {
     margin: 30px auto; }
 
   .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
 
   .modal-sm {
@@ -325,8 +329,7 @@ body.home, body.single {
       body.home .entry-thumbnail img, body.single .entry-thumbnail img {
         height: 860px !important; } }
   body.home img.wp-post-image, body.single img.wp-post-image {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 100%;
     display: block;
     position: relative; }
@@ -480,27 +483,16 @@ body.home .preview-navigation, body.single .preview-navigation {
       padding: 0;
       background-color: #FFF; } }
   body.home .preview-navigation .preview-wrap, body.single .preview-navigation .preview-wrap {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     padding-top: 25px;
     padding-bottom: 25px; }
     @media (min-width: 768px) and (max-width: 1023px) {
       body.home .preview-navigation .preview-wrap, body.single .preview-navigation .preview-wrap {
         margin: auto;
-        -webkit-flex-wrap: nowrap;
-            -ms-flex-wrap: nowrap;
-                flex-wrap: nowrap; } }
+        flex-wrap: nowrap; } }
     @media (min-width: 1024px) {
       body.home .preview-navigation .preview-wrap, body.single .preview-navigation .preview-wrap {
         padding-top: 0px;
@@ -534,8 +526,7 @@ body.home .preview-navigation, body.single .preview-navigation {
             height: 100%;
             background-size: 100px; } }
       body.home .preview-navigation .preview-wrap .preview-video a img, body.single .preview-navigation .preview-wrap .preview-video a img {
-        -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         height: 100%;
         width: 100%; }
     body.home .preview-navigation .preview-wrap .preview-meta, body.single .preview-navigation .preview-wrap .preview-meta {
@@ -586,10 +577,7 @@ body.home .preview-navigation, body.single .preview-navigation {
             float: right; } }
 @media (min-width: 1024px) {
   body.home .preview-navigation .preview-wrap:last-of-type .preview-video, body.single .preview-navigation .preview-wrap:last-of-type .preview-video {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2; } }
+    order: 2; } }
 
 ::-webkit-input-placeholder {
   font-family: "Avenir Next W00";
@@ -612,13 +600,8 @@ body.home .preview-navigation, body.single .preview-navigation {
 .email-capture-bar {
   background-color: #F0F0F1;
   padding: 10em 0em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+  flex-flow: row wrap; }
   .email-capture-bar .email-capture-flag {
     max-width: 50%;
     margin: auto;
@@ -668,10 +651,7 @@ body.home .preview-navigation, body.single .preview-navigation {
     background-color: transparent;
     top: 2px;
     padding: 2px;
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
     height: 30px;
     width: 40px;
     z-index: 2;
@@ -716,27 +696,15 @@ body.home .preview-navigation, body.single .preview-navigation {
     text-align: right;
     margin: 0px;
     width: 100%;
-    -webkit-flex-shrink: 2;
-        -ms-flex-negative: 2;
-            flex-shrink: 2;
+    flex-shrink: 2;
     vertical-align: middle;
     height: 20px; }
     .small-form form .form {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-flow: row;
-          -ms-flex-flow: row;
-              flex-flow: row;
-      -webkit-flex-wrap: nowrap;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap;
+      flex-flow: row;
+      flex-wrap: nowrap;
       padding-top: 0px;
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
+      justify-content: flex-end; }
       .small-form form .form .label {
         width: 50%;
         line-height: 2;
@@ -748,20 +716,10 @@ body.home .preview-navigation, body.single .preview-navigation {
             display: block; } }
       .small-form form .form .input {
         width: auto;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-flex-flow: row;
-            -ms-flex-flow: row;
-                flex-flow: row;
-        -webkit-flex-wrap: nowrap;
-            -ms-flex-wrap: nowrap;
-                flex-wrap: nowrap;
-        -webkit-box-pack: end;
-        -webkit-justify-content: flex-end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
+        flex-flow: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
         padding-right: 10px; }
     .small-form form input::-webkit-input-placeholder {
       font-family: "Avenir Next W00";
@@ -793,10 +751,7 @@ body.home .preview-navigation, body.single .preview-navigation {
       min-width: 10px;
       width: 20px;
       float: right;
-      -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-          -ms-flex-order: 2;
-              order: 2;
+      order: 2;
       height: 20px;
       padding: 0px;
       padding-right: 5px;
@@ -848,18 +803,9 @@ body.home .preview-navigation, body.single .preview-navigation {
   width: 100%;
   height: 50px;
   text-align: left;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   padding: 0px;
   border-top: 0px rgba(255, 255, 255, 0.8) solid; }
   .site-footer .footer-wrap {
@@ -867,47 +813,23 @@ body.home .preview-navigation, body.single .preview-navigation {
     margin: auto;
     margin-top: 0px;
     margin-bottom: 0px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     box-sizing: content-box;
     margin-left: -2px;
     margin-right: -2px;
     width: calc(100% + 4px); }
   .site-footer .icons-wrap {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     width: 100%;
     box-sizing: border-box; }
     .site-footer .icons-wrap .social-square {
       display: block;
-      -webkit-box-flex: 1;
-      -webkit-flex-grow: 1;
-          -ms-flex-positive: 1;
-              flex-grow: 1;
+      flex-grow: 1;
       width: 100%;
       text-align: center;
       transition: all 0.7s;
@@ -992,10 +914,7 @@ body.home .preview-navigation, body.single .preview-navigation {
       vertical-align: middle;
       text-align: center;
       float: right;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
+      justify-content: center; }
     .site-footer .email-capture-form label {
       font-family: "Avenir Next W00";
       font-weight: 200;
@@ -1025,13 +944,8 @@ body.home .featured-header {
     display: none; }
   body.home .featured-header article {
     top: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-            flex-flow: column;
+    flex-flow: column;
     max-width: 100%;
     height: 100%;
     border-bottom: none;
@@ -1048,8 +962,7 @@ body.home .featured-header {
         body.home .featured-header article a {
           height: 860px; } }
       body.home .featured-header article a img {
-        -o-object-fit: cover;
-           object-fit: cover;
+        object-fit: cover;
         width: 100%;
         height: 400px; }
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -1069,26 +982,13 @@ body.home .featured-header {
       body.home .featured-header article .entry-header .entry-title a, body.home .featured-header article .entry-header .entry-title {
         display: none; }
     body.home .featured-header article .entry-content {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
+      flex-wrap: wrap;
+      flex-direction: row;
       padding: 0; }
       @media (min-width: 1024px) {
         body.home .featured-header article .entry-content {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -webkit-flex-direction: nowrap;
-              -ms-flex-direction: nowrap;
-                  flex-direction: nowrap; } }
+          flex-direction: nowrap; } }
     body.home .featured-header article .has-content-area {
       display: block;
       width: 100%;
@@ -1125,10 +1025,7 @@ body.home .featured-header {
         line-height: 1.4; }
     body.home .featured-header article .email-capture-form {
       display: block;
-      -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-          -ms-flex-order: 2;
-              order: 2;
+      order: 2;
       width: 100%;
       max-width: 100%;
       margin: 0;
@@ -1214,9 +1111,10 @@ body.home .featured-header {
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s; }
 
-body.home.safari.desktop .featured-header .has-content-area {
-  width: calc(50% - 2px);
-  left: -2px; }
+@media (min-width: 1024px) {
+  body.home.safari .featured-header .has-content-area {
+    width: calc(50% - 2px);
+    left: -2px; } }
 
 .take-action-cta {
   text-align: center;
@@ -1447,11 +1345,7 @@ html {
     .post-social {
       opacity: 1; } }
   .post-social .icons-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 30px; }
     .post-social .icons-wrap .social {
       display: block;
