@@ -95,7 +95,9 @@ body.home .featured-header
 				line-height: 1.4	
 
 		.email-capture-form
-			display: block
+			display: flex
+			align-items: center
+			justify-content: center
 			order: 2
 			width: 100%
 			max-width: 100%
@@ -109,13 +111,15 @@ body.home .featured-header
 			.label
 				margin-top: 2em
 				@include desktop
-					margin-top: 6em
+					margin-top: 2em
 				margin-bottom: 2rem
 				@include font($avenir, 1.8rem, 400, $white)
 				@include letterspacing(2)
 			form 
 				font-weight: 200
 				width: 80%
+				@include desktop
+					width: 100%
 				margin: auto
 				margin-bottom: 2em
 				text-align: center

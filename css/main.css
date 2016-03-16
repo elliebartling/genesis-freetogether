@@ -1024,7 +1024,9 @@ body.home .featured-header {
         display: block;
         line-height: 1.4; }
     body.home .featured-header article .email-capture-form {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       order: 2;
       width: 100%;
       max-width: 100%;
@@ -1046,13 +1048,16 @@ body.home .featured-header {
         letter-spacing: 2 px; }
         @media (min-width: 1024px) {
           body.home .featured-header article .email-capture-form .label {
-            margin-top: 6em; } }
+            margin-top: 2em; } }
       body.home .featured-header article .email-capture-form form {
         font-weight: 200;
         width: 80%;
         margin: auto;
         margin-bottom: 2em;
         text-align: center; }
+        @media (min-width: 1024px) {
+          body.home .featured-header article .email-capture-form form {
+            width: 100%; } }
       body.home .featured-header article .email-capture-form input[name="EMAIL"] {
         border-radius: 4px;
         background-color: #d81a20;
