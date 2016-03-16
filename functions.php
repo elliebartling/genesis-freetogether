@@ -72,8 +72,11 @@ add_theme_support('post-thumbnails');
 // Add Post Thumbnail Support
 set_post_thumbnail_size(1500, 850, TRUE);
 
-//* Add new featured image sizes
+//* Add new medium image sizes
 add_image_size( 'medium', 460, 460, TRUE );
+
+//* Add new featured image sizes
+add_image_size( 'featured-huge', 2880, 1736, TRUE );
 
 // if ( is_mobile() ) {
 // // Add Post Thumbnail Support

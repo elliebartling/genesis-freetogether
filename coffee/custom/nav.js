@@ -4,6 +4,13 @@ jQuery(document).ready(function($) {
 	var delta = 5;
 	var navbarHeight = $('.site-header').outerHeight();
 
+	// console.log('JS Loaded Sucessfully');
+	if ( $('body').hasClass('desktop') ) {
+			// console.log('Has Desktop Class');
+			$('.site-footer').addClass('invisible');
+		}
+
+
 	$(window).scroll(function(event) {
 		didScroll = true;
 	});
@@ -39,5 +46,7 @@ jQuery(document).ready(function($) {
 
 		lastScrollTop = st;
 	}
+
+		
 		
 });
