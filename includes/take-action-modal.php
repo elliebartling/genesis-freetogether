@@ -14,7 +14,7 @@ function ft_take_action_modal() {
 				        <h4 class="modal-title">Take Action</h4>
 				      </div>
 				      <div class="modal-body">
-				        <p>Free Together partners with state-based organizations on targeted issues. Enter your zipcode and email below, and we’ll match you with an organization that’s working on issues in your state.</p>
+				        <p>Enter your zipcode and email below, and we’ll match you with an organization that’s working on issues in your state.</p>
 				      </div>
 				      <div class="modal-footer">';
 	$after = '';

@@ -302,27 +302,27 @@ add_filter('widget_text', 'do_shortcode');
 function ft_take_action_button() {
 
 	// Get post ID
-	$post = get_the_ID();
-	$fullName = rwmb_meta( 'name' );
-	$allNames = explode(" ", $fullName);
+	// $post = get_the_ID();
+	// $fullName = rwmb_meta( 'name' );
+	// $allNames = explode(" ", $fullName);
 
-	// If this is part of a post, get the first name of the Story Name field
+	// // If this is part of a post, get the first name of the Story Name field
 	echo '<div class="take-action-cta">';
-	if ($post) {
-		echo '<div class="take-action-text">';
-		echo 'Click here to learn more';
-		if ($fullName) {
-			echo ' about ';
-			echo $allNames[0];
-			echo '\'s story';
-		}
-		echo '.';
-		echo '</div>';
-	}
+	// if ($post) {
+	// 	echo '<div class="take-action-text">';
+	// 	echo 'Click here to learn more';
+	// 	if ($fullName) {
+	// 		echo ' about ';
+	// 		echo $allNames[0];
+	// 		echo '\'s story';
+	// 	}
+	// 	echo '.';
+	// 	echo '</div>';
+	// }
 	// And echo text about this story with the button
 
 	// And then echo the button
-	echo '<button class="button take-action-button" data-toggle="modal" data-target="#takeAction">Take Action</button>';
+	echo '<button class="button take-action-button" data-toggle="modal" data-target="#takeAction">I have a story to tell.</button>';
 	echo '</div>';
 
 
