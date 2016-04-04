@@ -2,10 +2,12 @@
 // This is the localhost server
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
+include('includes/ft-include-pixel.php');
 include('includes/partner-carousel.php');
 include('includes/video-lightboxes/video-lightboxes.php');
 include('includes/take-action-modal.php');
 include('includes/social-media-footer.php');
+
 
 
 //* Child theme (do not remove)
