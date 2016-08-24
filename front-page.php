@@ -15,7 +15,7 @@ add_action( 'genesis_before_content', 'ft_featured_header' );
 		// $post_video = https://vimeo.com/example
 
 		if (strpos($post_video, 'vimeo.com') !== FALSE) {
-			
+
 			$x = explode('/', $post_video);
 			// $x = ['https:', 'vimeo.com', 'example']
 
@@ -27,6 +27,7 @@ add_action( 'genesis_before_content', 'ft_featured_header' );
 			// Right now, Featured Video Plus is pulling from *posts* not pages
 			// Fix before handoff.
 			$video_id = '156890058';
+			$video_id = '180102584';
 
 
 			$player_url = '//player.vimeo.com/video/' . $video_id . '?autoplay=1&color=FFF';
@@ -35,7 +36,7 @@ add_action( 'genesis_before_content', 'ft_featured_header' );
 
 
 
-		} 
+		}
 
 
 //
