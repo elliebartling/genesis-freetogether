@@ -26,7 +26,7 @@ add_action( 'genesis_before_content', 'ft_featured_header' );
 			// Hack fix for the time being to display the correct video
 			// Right now, Featured Video Plus is pulling from *posts* not pages
 			// Fix before handoff.
-			$video_id = '156890058';
+			// $video_id = '156890058'; // OLD VIDEO
 			$video_id = '180102584';
 
 
