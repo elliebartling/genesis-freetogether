@@ -16,7 +16,7 @@ var revTask = function(cb) {
     // 'rev-css',
     // 'rev-vendorjs',
     // // 4) Update asset references in HTML
-    // 'update-html',
+    'update-html',
   cb)
 }
 
