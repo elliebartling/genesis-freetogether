@@ -1,0 +1,185 @@
+$hero-image-height: 400px
+$hero-image-tablet: 600px
+$hero-image-desktop: 860px
+
+
+.widget-wrap
+	max-height: 100%
+
+.content-sidebar-wrap + .preview-navigation
+	display: none !important
+
+.content-sidebar-wrap + .preview-navigation + .email-capture-bar
+	display: none !important
+
+body.home div.featured-header.widget-area
+	// max-height: 100%
+	height: 100%
+	position: relative
+	.widget-title
+		display: none
+
+	article
+		top: 0
+		display: flex
+		flex-flow: column
+		max-width: 100%
+		// height: 100%
+		border-bottom: none
+		margin-bottom: 0
+		a.featured-header-link
+			display: block
+		div.img-wrap
+			position: relative
+			height: $hero-image-height
+			@include tablet
+				height: $hero-image-tablet
+			@include desktop
+				height: $hero-image-desktop
+			overflow: hidden
+			width: 100%
+			margin-bottom: 0
+			img
+				object-fit: cover
+				// position: relative
+				width: 100%
+				height: $hero-image-height
+				@include tablet
+					height: $hero-image-tablet
+				@include desktop
+					height: $hero-image-desktop
+
+		.entry-header
+			display: none
+			background: none
+			width: 50%
+			padding-left: 5%
+			padding-bottom: 0
+			margin-top: 4%
+			margin-bottom: 0
+			.entry-title a, .entry-title
+				display: none
+
+
+		div.entry-content
+			display: flex !important
+			flex-wrap: wrap
+			margin-top: 0px
+			@include desktop
+				flex-direction: nowrap
+			flex-direction: row
+			padding: 0
+
+
+
+		// .entry-content-text,
+		.has-content-area
+			display: block
+			width: 100%
+			text-align: center
+			@include desktop
+				position: relative
+				width: 50%
+				text-align: left
+			padding: 5%
+			@include font($avenir, 1.8, regular, $gray-blue)
+			h1
+				background: none
+				line-height: .9
+				margin-bottom: 2rem
+				margin-top: 2rem
+				letter-spacing: 2px
+				@include font($avenir, 3.5, bold, $gray-blue)
+				@include tablet-or-bigger
+					font-size: 5.5rem
+				@include uppercase()
+				display: block
+			p
+				display: block
+				line-height: 1.4
+
+		.email-capture-form
+			display: flex
+			align-items: center
+			justify-content: center
+			order: 2
+			width: 100%
+			max-width: 100%
+			margin: 0
+			// height: 100%
+			@include desktop
+				width: 49.8%
+			background: $primary
+			text-align: center
+			vertical-align: center
+			.label
+				margin-top: 2em
+				@include desktop
+					margin-top: 2em
+				margin-bottom: 2rem
+				@include font($avenir, 1.8rem, 400, $white)
+				@include letterspacing(2)
+			form
+				font-weight: 200
+				width: 80%
+				@include desktop
+					width: 100%
+				margin: auto
+				margin-bottom: 2em
+				text-align: center
+			input[name="EMAIL"]
+				border-radius: 4px
+				background-color: darken($primary, 10%)
+				color: $white
+				border: none
+				max-width: 90%
+				margin-left: -25px
+			.button
+				position: relative
+				margin-left: -50px
+				background-color: darken($primary, 10%)
+				top: 2px
+				padding: 2px
+				h3
+					line-height: 0
+					@include font($avenir, 1.8rem, 200, $white)
+					span
+						font-weight: 200
+
+	a.featured-header-link
+		z-index: 2
+		// height: $hero-image-height
+		// @include tablet
+		// 	height: $hero-image-tablet
+		// @include desktop
+		// 	height: $hero-image-desktop
+		width: 100%
+
+
+	.play-button
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background: url(../images/FT-play.png) no-repeat 30% 50%
+		max-height: $hero-image-height
+		background-size: 60%
+		@include tablet
+			max-height: $hero-image-tablet
+			background-size: 40%
+		@include desktop
+			max-height: $hero-image-desktop
+			background-size: 40%
+		opacity: 1
+		z-index: 1
+	.play-button:hover, .play-button:focus
+		background-color: rgba(11,15,29,0.5)
+		opacity: 1
+		@include transition(background-color, 0.5s)
+
+// body.home.safari .featured-header .has-content-area
+// 	@include desktop
+// 		width: calc(50% - 2px)
+// 		left: -2px

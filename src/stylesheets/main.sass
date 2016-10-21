@@ -1,0 +1,62 @@
+// Import Variables & Mixins
+@import partials/variables
+@import partials/mixins
+@import "../../components/featherlight/src/featherlight.css"
+
+html
+	font-family: $avenir
+	font-size: 62.5% /*! Sets up the Base 10 stuff */
+
+
+
+.site-inner
+	padding: 0
+	max-width: 100%
+	width: 100%
+	background-color: $white
+
+.icon-arrow-right:before
+	content: "\e901"
+
+.icon-arrow-right2:before
+	content: "\e904"
+
+.visible
+	opacity: 1
+	@include transition(all, .25s)
+
+.site-footer.visible, .site-footer
+	// opacity: 0
+	@include tablet-or-bigger
+		opacity: 1
+
+.invisible
+	opacity: 0
+	@include transition(all, .25s)
+
+.content
+	// padding-top: 60px
+
+.owl-stage .mix
+	display: none
+
+
+@import libraries
+@import partials/nav
+@import partials/article
+@import partials/article-previews
+@import partials/email-capture
+@import partials/featured
+@import partials/take-action
+@import partials/font-smoothing
+@import partials/vimeo-lightbox
+@import partials/ff-stream
+@import partials/post-social
+@import partials/state-filter
+@import partials/footer
+
+
+@import discover
+@import pages
+
+@import partials/partner-carousel

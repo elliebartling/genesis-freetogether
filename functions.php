@@ -17,14 +17,15 @@ define( 'CHILD_THEME_VERSION', '2.0.0' );
 define('STYLESHEET_URI', get_stylesheet_directory_uri() );
 
 
-//* Enqueue Google Fonts
+//* Enqueue common scripts & styles
 add_action( 'wp_enqueue_scripts', 'ft_enqueue_styles' );
 function ft_enqueue_styles() {
-	// wp_enqueue_style( 'bootstrap-light', get_stylesheet_directory_uri() . '/css/bootstrap/bootstrap.css', array());
 	wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/main.css', array(), CHILD_THEME_VERSION );
-	wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/main.js', array('jquery'), ' ', true );
+	wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/freetogether.js', array('jquery'), ' ', true );
 
 }
+
+//* Enqueue admin scripcs & styles
 add_action( 'admin_print_scripts-post-new.php', 'ft_admin_enqueue_scripts', 11 );
 add_action( 'admin_print_scripts-post.php', 'ft_admin_enqueue_scripts', 11 );
 function ft_admin_enqueue_scripts() {
@@ -32,7 +33,7 @@ function ft_admin_enqueue_scripts() {
 	if ('partner' == $post_type) {
 		wp_enqueue_script( 'twitter-API-js', get_stylesheet_directory_uri() . '/js/admin-twitter.js', array('jquery'), ' ', true );
 		wp_enqueue_style( 'admin-styles', get_stylesheet_directory_uri() . '/css/admin-styles.css', array(), CHILD_THEME_VERSION );
-		
+
 	}
 	if ('post' == $post_type) {
 		wp_enqueue_script( 'tweet-counter-js', get_stylesheet_directory_uri() . '/js/admin-twitter-counter.js', array('jquery'), ' ', true );
@@ -69,7 +70,7 @@ function ft_exclude_category_from_home( $query ) {
     }
 }
 // Add support for post thumbnails
-add_theme_support('post-thumbnails'); 
+add_theme_support('post-thumbnails');
 
 // Add Post Thumbnail Support
 set_post_thumbnail_size(1500, 850, TRUE);
@@ -79,11 +80,6 @@ add_image_size( 'medium', 460, 460, TRUE );
 
 //* Add new featured image sizes
 add_image_size( 'featured-huge', 2880, 1736, TRUE );
-
-// if ( is_mobile() ) {
-// // Add Post Thumbnail Support
-// set_post_thumbnail_size(500, 500, TRUE);
-// }
 
 // Don't show admin bar
 show_admin_bar(false);
@@ -102,7 +98,7 @@ genesis_register_sidebar( array(
 	'description'   => __( 'This is a widget area for featuring a reel at the top of the page', 'freetogether' ),
 ) );
 
-//* Register Take Action modal 
+//* Register Take Action modal
 genesis_register_sidebar( array(
 	'id'            => 'email-capture-modal',
 	'name'          => __( 'Email Capture Modal', 'freetogether' ),
@@ -191,10 +187,10 @@ function ft_preview_next_post() {
 		'posts_per_page' => 2,
 		'exclude' => $exclude_ids,
 		'category_name' => 'stories',
-		'orderby' => 'rand' 
+		'orderby' => 'rand'
 		);
 	$posts_array = get_posts( $args );
-	
+
 
 	// Print the opening div structure for the posts
 	echo '<div class="preview-navigation">';
@@ -209,7 +205,7 @@ function ft_preview_next_post() {
 					<a class="video-thumbnail" href="<?php echo $permalink ?>">
 						<?php
 							echo get_the_post_thumbnail($post->ID, 'large');
-						?>					
+						?>
 					<div class="play-button" ></div>
 					</a>
 				</div>
@@ -229,7 +225,7 @@ function ft_preview_next_post() {
 	}
 
 	// Print the closing div structure for the posts
-	echo '</div>';	
+	echo '</div>';
 
 }
 
@@ -268,7 +264,7 @@ function ft_email_capture_bar() {
 
 //* Create Email Capture Shortcode
 
-function ft_email_capture_box($cta) { 
+function ft_email_capture_box($cta) {
 
 	extract(shortcode_atts(array(
         "cta" => 'Learn More'
@@ -278,7 +274,7 @@ function ft_email_capture_box($cta) {
 	<div class="email-capture-form featured-email-capture-form">
 		<div id="mc_embed_signup">
 			<form action="//econstories.us7.list-manage.com/subscribe/post?u=3c416ed673b4f6e99320b1e76&amp;id=20afa62c9c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-					
+
 					<div class="label">
 						<label for="email">Get notified of FreeTogether developments:</label>
 					</div>
@@ -291,7 +287,7 @@ function ft_email_capture_box($cta) {
 		        </form>
 		    </div>
 	</div>
-	<?php 
+	<?php
 }
 add_shortcode('email_capture', 'ft_email_capture_box');
 
@@ -530,7 +526,7 @@ function ft_partner_orgs_custom_fields( $meta_boxes_orgs ) {
 					'WV' => __( 'WV', "{$prefix}" ),
 					'WI' => __( 'WI', "{$prefix}" ),
 					'WY' => __( 'WY', "{$prefix}" ),
-					
+
 				),
 				// Select multiple values, optional. Default is false.
 				'multiple'    => false,
@@ -650,7 +646,10 @@ function ft_be_zipcode_filter() {
 
 add_shortcode('zipcode_filter','ft_be_zipcode_filter');
 
-add_shortcode('partners_carousel','ft_partner_post_carousel');
+if (! is_admin() ) {
+	add_shortcode('partners_carousel','ft_partner_post_carousel');
+}
+
 
 
 
@@ -717,16 +716,3 @@ function ft_be_floating_social_media_icons() {
 	}
 }
 add_action('genesis_before_entry_content', 'ft_be_floating_social_media_icons');
-
-
-
-
-
-
-
-
-
-
-
-
-

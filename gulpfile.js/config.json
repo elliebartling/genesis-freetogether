@@ -1,0 +1,94 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "proxy" : "http://localhost:8888/freetogether-wordpress-gulp/wordpress/",
+      "open": false
+    },
+    "static": {
+      "src": "includes",
+      "dest": "includes",
+      "extensions": ["html", "php"]
+    },
+    "components": {
+      "src": "components",
+      "dest": "",
+      "extensions": ["*"]
+    },
+    "scripts": {
+      "src": "javascripts",
+      "dest": "js",
+      "entries": {
+        "freetogether": [
+          "./src/javascripts/freetogether.js"
+        ]
+      },
+      "extensions": ["js", "json", "coffee"]
+    },
+    "css": {
+      "src": "stylesheets",
+      "dest": "css",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": false,
+        "includePaths": [
+          "./node_modules/normalize.css"
+        ]
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "html": {
+      "src": "",
+      "dest": "",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["", ""],
+      "excludeFolders": ["layouts", "shared", "macros", "data"]
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "iconFont": {
+      "src": "icons",
+      "dest": "fonts",
+      "sassDest": "generated",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "svgSprite": {
+      "src": "icons",
+      "dest": "images",
+      "extensions": ["svg"]
+    },
+
+    "production" : {
+      "rev": true
+    },
+
+    "deployment" : {
+      "src": "./public",
+      "workingBranch" : "develop",
+      "featurePrefix" : "feature/",
+      "releasePrefix" : "release/",
+      "hotfixPrefix" : "hotfix/"
+    }
+  }
+}
