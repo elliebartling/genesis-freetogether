@@ -20,7 +20,6 @@ define('STYLESHEET_URI', get_stylesheet_directory_uri() );
 //* Enqueue common scripts & styles
 add_action( 'wp_enqueue_scripts', 'ft_enqueue_styles' );
 function ft_enqueue_styles() {
-	wp_enqueue_style( 'genesis-style', get_template_directory() . '/css/style.css', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/main.css', array(), CHILD_THEME_VERSION );
 	wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/freetogether.js', array('jquery'), ' ', true );
 

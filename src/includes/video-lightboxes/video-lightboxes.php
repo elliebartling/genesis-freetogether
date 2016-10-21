@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Video Lightboxes
-Plugin URI: 
+Plugin URI:
 Description: Click on featured images and open the corresponding video in a featherlight lightbox
 Author: Ellen Marie Bartling
 Author URI: http://wwww.emergentorder.com
@@ -17,12 +17,12 @@ define( 'VIDEO_LIGHTBOXES_FIELD', '_video_lightboxes' );
 define( 'VIDEO_LIGHTBOXES_VERSION', '1' );
 
 function vl_enqueue_scripts() {
-	wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/featherlight.min.js', '', false, true );
-	wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/lightbox-init.js', '', false, true );
-	// wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/lightboxes.js' );
+	// wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/featherlight.min.js', '', false, true );
+	// wp_enqueue_script( 'video-lightboxes-js', VIDEO_LIGHTBOXES_PATH . 'js/lightbox-init.js', '', false, true );
+	wp_enqueue_script( 'video-lightboxes-js', get_stylesheet_directory_uri() . '/js/lightboxes.js' );
 
-	wp_enqueue_style( 'featherlight', VIDEO_LIGHTBOXES_PATH . 'js/featherlight.min.css' );
-	wp_enqueue_style( 'video-lightboxes-style', VIDEO_LIGHTBOXES_PATH . 'js/lightbox-css.css' );
+	// wp_enqueue_style( 'featherlight', VIDEO_LIGHTBOXES_PATH . 'js/featherlight.min.css' );
+	// wp_enqueue_style( 'video-lightboxes-style', VIDEO_LIGHTBOXES_PATH . 'js/lightbox-css.css' );
 }
 add_action( 'wp_enqueue_scripts', 'vl_enqueue_scripts' );
 
@@ -37,7 +37,7 @@ function vl_featured_post_image() {
 	// $post_video = https://vimeo.com/example
 
 	if (strpos($post_video, 'vimeo.com') !== FALSE) {
-		
+
 		$x = explode('/', $post_video);
 		// $x = ['https:', 'vimeo.com', 'example']
 
@@ -47,7 +47,7 @@ function vl_featured_post_image() {
 		$player_url = '//player.vimeo.com/video/' . $video_id . '?autoplay=1&color=FFF';
 		// $player_url = '//player.vimeo.com/video/example'
 
-	} 
+	}
 
 	echo '<div class="entry">';
 	echo '<a class="video-thumbnail" href="';
