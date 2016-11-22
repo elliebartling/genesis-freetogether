@@ -21,7 +21,8 @@ remove_action('genesis_after_entry' , 'ft_preview_next_post');
 remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 remove_action('genesis_entry_footer', 'ft_take_action_button' );
 
-
+//* Remove the edit link
+add_filter ( 'genesis_edit_post_link' , '__return_false' );
 
 
 
