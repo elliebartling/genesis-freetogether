@@ -13,16 +13,15 @@ include('includes/social-media-footer.php');
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'FreeTogether Theme' );
 define( 'CHILD_THEME_URL', 'http://wwww.emergentorder.com' );
-define( 'CHILD_THEME_VERSION', '2.0.0' );
+define( 'CHILD_THEME_VERSION', '2.0.1' );
 define('STYLESHEET_URI', get_stylesheet_directory_uri() );
 
 
 //* Enqueue common scripts & styles
 add_action( 'wp_enqueue_scripts', 'ft_enqueue_styles' );
 function ft_enqueue_styles() {
-	wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/main.css', array(), CHILD_THEME_VERSION );
-	wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/js/freetogether.js', array('jquery'), ' ', true );
-
+	wp_enqueue_style( 'main-style', STYLESHEET_URI . '/css/main.css', array(), CHILD_THEME_VERSION );
+	wp_enqueue_script( 'main-js', STYLESHEET_URI . '/js/freetogether.js', array('jquery'), ' ', true );
 }
 
 //* Enqueue admin scripcs & styles
